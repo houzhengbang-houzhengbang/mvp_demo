@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#999999"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".ui.main.MainActivity">
+
+
+<!--    <com.hzb.myapplication.utils.immersionUtil.titleBar.TranslucentActionBar-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:id="@+id/actionbar"-->
+<!--        android:layout_height="wrap_content"/>-->
+
+
+    <FrameLayout
+        android:id="@+id/frame_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="Suspicious0dp" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/qb_px_52"
+        android:background="@color/white"
+        app:itemBackground="@color/white"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.09"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+
+        app:itemIconTint="@drawable/home_bottom_tab_color_selsctor"
+        app:itemTextColor="@drawable/home_bottom_tab_color_selsctor"
+        app:menu="@menu/bottom_navigation_main" />
+
+</LinearLayout>
